@@ -1,0 +1,235 @@
+/* ARTVISION - Modern Art-Inspired Professional Design System */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap');
+
+:root {
+    --primary-burgundy: #6B1D2F;
+    --deep-navy: #0F172A;
+    --warm-ochre: #C08436;
+    --soft-cream: #F8F6F0;
+    --light-card-bg: #FFFFFF;
+    --border-color: #E2E8F0;
+    --text-primary: #1E293B;
+    --text-secondary: #64748B;
+    --accent-gold: #D4AF37;
+    --shadow-soft: 0 4px 20px -2px rgba(15, 23, 42, 0.08);
+    --shadow-hover: 0 10px 25px -3px rgba(15, 23, 42, 0.12);
+}
+
+/* Global Font & Spacing */
+.main {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #FAF8F5;
+}
+
+/* Headers */
+h1, h2, h3 {
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-weight: 700 !important;
+    color: var(--deep-navy) !important;
+    letter-spacing: -0.02em;
+}
+
+/* Hero Section */
+.hero-banner {
+    background: linear-gradient(135deg, #1A1C29 0%, #2D1B28 50%, #4A1E2D 100%);
+    border-radius: 16px;
+    padding: 2.5rem 2.5rem;
+    color: #FFFFFF;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.hero-banner::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.hero-title {
+    font-family: 'Cinzel', serif !important;
+    font-size: 2.5rem !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.08em;
+    color: #F8F6F0 !important;
+    margin-bottom: 0.5rem !important;
+    text-transform: uppercase;
+}
+
+.hero-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: #E2E8F0;
+    max-width: 750px;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Card Components */
+.art-card {
+    background: #FFFFFF;
+    border-radius: 14px;
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-soft);
+    transition: all 0.25s ease-in-out;
+    margin-bottom: 1.25rem;
+}
+
+.art-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+    border-color: #CBD5E1;
+}
+
+.art-card-highlight {
+    background: #FFFFFF;
+    border-radius: 14px;
+    padding: 1.75rem;
+    border-left: 5px solid var(--accent-gold);
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 1.5rem;
+}
+
+/* Status Badges */
+.status-badge-ready {
+    display: inline-block;
+    background-color: #ECFDF5;
+    color: #065F46;
+    border: 1px solid #A7F3D0;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.825rem;
+    font-weight: 600;
+}
+
+.status-badge-setup {
+    display: inline-block;
+    background-color: #FFFBEB;
+    color: #92400E;
+    border: 1px solid #FDE68A;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.825rem;
+    font-weight: 600;
+}
+
+/* Color Swatches */
+.swatch-container {
+    display: flex;
+    gap: 12px;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.swatch-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding: 8px;
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    min-width: 90px;
+}
+
+.swatch-color {
+    width: 70px;
+    height: 48px;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.swatch-hex {
+    font-family: monospace;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #1E293B;
+}
+
+.swatch-pct {
+    font-size: 0.75rem;
+    color: #64748B;
+}
+
+/* Prediction Result Spotlight */
+.prediction-badge {
+    background: linear-gradient(135deg, #1E293B 0%, #334155 100%);
+    color: #FFFFFF;
+    padding: 1.5rem 2rem;
+    border-radius: 14px;
+    text-align: center;
+    border: 2px solid var(--accent-gold);
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 1.5rem;
+}
+
+.prediction-title {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #D4AF37;
+    margin-bottom: 0.25rem;
+}
+
+.prediction-style-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.prediction-confidence {
+    font-size: 1.15rem;
+    color: #E2E8F0;
+    margin-top: 0.5rem;
+}
+
+/* Style Pill */
+.style-pill {
+    display: inline-block;
+    padding: 0.35rem 0.85rem;
+    margin: 0.2rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    background: #F1F5F9;
+    color: #334155;
+    border: 1px solid #E2E8F0;
+}
+
+/* Metric Stats Card */
+.metric-box {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.metric-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-burgundy);
+}
+
+.metric-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #64748B;
+    margin-top: 0.2rem;
+}
